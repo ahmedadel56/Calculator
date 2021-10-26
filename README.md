@@ -7,7 +7,7 @@
 > This project consist in making Calculator using React.
 
 # Live Demo
-  you can checkout website [here](https://ahmedadel56.github.io/To-Do-List/dist/)
+  you can checkout website [here](https://ahmedadel56.github.io/Calculator/)
 
 ## Built With
 
@@ -15,8 +15,6 @@
 - Javascript
 - React
 
-### Live Demo
-[Live Demo Link](https://ahmedadel56.github.io/Calculator/)
 
 
 ## Getting Started
