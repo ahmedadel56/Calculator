@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../components-style/Calculator.css';
+import '../logic/calculate';
+import '../logic/operate';
 
 export default class Calculator extends Component {
   render() {
