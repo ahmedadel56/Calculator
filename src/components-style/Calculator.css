@@ -39,6 +39,10 @@ button {
   font-size: 22px;
 }
 
+button:active {
+  opacity: 0.5;
+}
+
 button:nth-of-type(4),
 button:nth-of-type(8),
 button:nth-of-type(12),
