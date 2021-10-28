@@ -1,111 +1,111 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import '../components-style/Calculator.css';
 import calculate from '../logic/calculate';
 
-export default class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  }
+export default function Calculator() {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
 
-  numbersHandler = (e) => {
-    const { total, next, operation } = this.state;
+  const numbersHandler = (e) => {
+    const { total, next, operation } = state;
 
     if (!total && !operation) {
-      this.setState({ total: e.target.innerHTML });
+      setState({ ...state, total: e.target.innerHTML });
     } else if (total && !operation) {
-      this.setState({ total: total + e.target.innerHTML });
+      setState({ ...state, total: total + e.target.innerHTML });
     } else if (total && operation && !next) {
-      this.setState({ next: e.target.innerHTML });
+      setState({ ...state, next: e.target.innerHTML });
     } else {
-      this.setState({ next: next + e.target.innerHTML });
+      setState({ ...state, next: next + e.target.innerHTML });
     }
   };
 
-  operationHandler = (e) => {
-    this.setState({ operation: e.target.innerHTML });
+  const operationHandler = (e) => {
+    setState({ ...state, operation: e.target.innerHTML });
   };
 
-  handleResults = (e) => {
-    const calculation = calculate(this.state, e.target.innerHTML);
+  const handleResults = (e) => {
+    const calculation = calculate(state, e.target.innerHTML);
 
-    this.setState(calculation);
+    setState(calculation);
   };
 
-  render() {
-    const { total, next, operation } = this.state;
+  const { total, next, operation } = state;
 
-    return (
-      <div className="container">
-        <div className="output">
-          {total || 0}
-          {operation}
-          {next}
-        </div>
-        <div className="buttons">
-          <button type="button" onClick={this.handleResults}>
-            AC
-          </button>
-          <button type="button" onClick={this.handleResults}>
-            +/-
-          </button>
-          <button type="button" onClick={this.operationHandler}>
-            %
-          </button>
-          <button type="button" onClick={this.operationHandler}>
-            ÷
-          </button>
-          <button type="button" onClick={this.numbersHandler}>
-            7
-          </button>
-          <button type="button" onClick={this.numbersHandler}>
-            8
-          </button>
-          <button type="button" onClick={this.numbersHandler}>
-            9
-          </button>
-          <button type="button" operation="x" onClick={this.operationHandler}>
-            x
-          </button>
-          <button type="button" onClick={this.numbersHandler}>
-            4
-          </button>
-          <button type="button" onClick={this.numbersHandler}>
-            5
-          </button>
-          <button type="button" onClick={this.numbersHandler}>
-            6
-          </button>
-          <button type="button" operation="-" onClick={this.operationHandler}>
-            -
-          </button>
-          <button type="button" onClick={this.numbersHandler}>
-            1
-          </button>
-          <button type="button" onClick={this.numbersHandler}>
-            2
-          </button>
-          <button type="button" onClick={this.numbersHandler}>
-            3
-          </button>
-          <button type="button" operation="+" onClick={this.operationHandler}>
-            +
-          </button>
-          <button type="button" buttonName="0" className="not-equal" onClick={this.numbersHandler}>
-            0
-          </button>
-          <button type="button" buttonName="." onClick={this.handleResults}>
-            .
-          </button>
-          <button type="button" buttonName="=" onClick={this.handleResults}>
-            =
-          </button>
-        </div>
+  return (
+    <div className="container">
+      <div className="output">
+        {total || 0}
+        {operation}
+        {next}
       </div>
-    );
-  }
+      <div className="buttons">
+        <button type="button" onClick={handleResults}>
+          AC
+        </button>
+        <button type="button" onClick={handleResults}>
+          +/-
+        </button>
+        <button type="button" onClick={operationHandler}>
+          %
+        </button>
+        <button type="button" onClick={operationHandler}>
+          ÷
+        </button>
+        <button type="button" onClick={numbersHandler}>
+          7
+        </button>
+        <button type="button" onClick={numbersHandler}>
+          8
+        </button>
+        <button type="button" onClick={numbersHandler}>
+          9
+        </button>
+        <button type="button" operation="x" onClick={operationHandler}>
+          x
+        </button>
+        <button type="button" onClick={numbersHandler}>
+          4
+        </button>
+        <button type="button" onClick={numbersHandler}>
+          5
+        </button>
+        <button type="button" onClick={numbersHandler}>
+          6
+        </button>
+        <button type="button" operation="-" onClick={operationHandler}>
+          -
+        </button>
+        <button type="button" onClick={numbersHandler}>
+          1
+        </button>
+        <button type="button" onClick={numbersHandler}>
+          2
+        </button>
+        <button type="button" onClick={numbersHandler}>
+          3
+        </button>
+        <button type="button" operation="+" onClick={operationHandler}>
+          +
+        </button>
+        <button
+          type="button"
+          buttonName="0"
+          className="not-equal"
+          onClick={numbersHandler}
+        >
+          0
+        </button>
+        <button type="button" buttonName="." onClick={handleResults}>
+          .
+        </button>
+        <button type="button" buttonName="=" onClick={handleResults}>
+          =
+        </button>
+      </div>
+    </div>
+  );
 }
