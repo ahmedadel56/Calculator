@@ -1,0 +1,16 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 4rem;
+}
+
+.link {
+  padding-right: 1rem;
+  margin-left: 1rem;
+  border-right: 3px solid black;
+  color: blue;
+}
+
+.is-active {
+  font-weight: bold;
+}
