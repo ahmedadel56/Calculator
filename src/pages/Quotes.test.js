@@ -8,4 +8,3 @@ describe('<Quotes />', () => {
     expect(tree).toMatchSnapshot();
   });
 });
-
