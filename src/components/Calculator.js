@@ -36,7 +36,7 @@ const Calculator = () => {
   const { total, next, operation } = state;
 
   return (
-    <div className="container">
+    <div className="container" data-testid="Calculator">
       <div className="output">
         {total || 0}
         {operation}

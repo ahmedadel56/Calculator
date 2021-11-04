@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav /> it should match snapshot 1`] = `
+<header
+  className="headerContainer"
+  data-testid="Nav"
+>
+  <h1>
+    Math Magicians
+  </h1>
+  <div>
+    <a
+      aria-current="page"
+      className="link is-active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+    <a
+      aria-current={null}
+      className="link"
+      href="/calculator"
+      onClick={[Function]}
+    >
+      Calculator
+    </a>
+    <a
+      aria-current={null}
+      className="link"
+      href="/quotes"
+      onClick={[Function]}
+    >
+      Quotes
+    </a>
+  </div>
+</header>
+`;

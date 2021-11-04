@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div data-testid="App">
           <Nav />
           <Switch>
             <Route exact path="/">
