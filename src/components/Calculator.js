@@ -98,10 +98,16 @@ const Calculator = () => {
         >
           0
         </button>
-        <button type="button" onClick={handleResults}>
+        <button
+          type="button"
+          onClick={handleResults}
+        >
           .
         </button>
-        <button type="button" onClick={handleResults}>
+        <button
+          type="button"
+          onClick={handleResults}
+        >
           =
         </button>
       </div>

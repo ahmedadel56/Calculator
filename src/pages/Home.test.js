@@ -8,3 +8,4 @@ describe('<Home />', () => {
     expect(tree).toMatchSnapshot();
   });
 });
+
