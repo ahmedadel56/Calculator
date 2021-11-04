@@ -113,7 +113,6 @@ exports[`<Calculator /> it should match snapshot 1`] = `
       +
     </button>
     <button
-      buttonName="0"
       className="not-equal"
       onClick={[Function]}
       type="button"
@@ -121,14 +120,12 @@ exports[`<Calculator /> it should match snapshot 1`] = `
       0
     </button>
     <button
-      buttonName="."
       onClick={[Function]}
       type="button"
     >
       .
     </button>
     <button
-      buttonName="="
       onClick={[Function]}
       type="button"
     >

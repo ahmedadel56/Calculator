@@ -93,16 +93,15 @@ const Calculator = () => {
         </button>
         <button
           type="button"
-          buttonName="0"
           className="not-equal"
           onClick={numbersHandler}
         >
           0
         </button>
-        <button type="button" buttonName="." onClick={handleResults}>
+        <button type="button"  onClick={handleResults}>
           .
         </button>
-        <button type="button" buttonName="=" onClick={handleResults}>
+        <button type="button" onClick={handleResults}>
           =
         </button>
       </div>
