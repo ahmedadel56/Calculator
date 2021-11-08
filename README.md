@@ -7,7 +7,8 @@
 > This project consist in making Calculator using React.
 
 # Live Demo
-  you can checkout website [here](https://ahmedadel56.github.io/Calculator/)
+  you can checkout website [Github-Pages](https://ahmedadel56.github.io/Calculator/)
+  or [Heroku-Deployment](https://react-math-ma.herokuapp.com/)
 
 ## Built With
 
